@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f5f5f5;
@@ -9,12 +10,12 @@ h1 {
     text-align: center;
 }
 
-
+/* Button Styling */
 button {
     cursor: pointer;
 }
 
-
+/* Board Styling */
 .board-container {
     display: flex;
     justify-content: center;
@@ -37,6 +38,7 @@ button {
     transition: background 0.3s ease;
 }
 
+/* Flashcard Styling */
 .flashcard {
     width: 180px;
     height: 120px;
@@ -63,6 +65,7 @@ button {
     display: none;
 }
 
+/* Hover & Click Effects */
 .flashcard:hover {
     transform: scale(1.05);
 }
@@ -71,6 +74,7 @@ button {
     background: #ff9800;
 }
 
+/* Flashcard Controls */
 .flashcard-controls {
     position: absolute;
     bottom: 5px;
@@ -88,6 +92,7 @@ button {
     border-radius: 3px;
 }
 
+/* Popup Styles */
 .popup {
     display: none;
     position: fixed;
@@ -108,7 +113,7 @@ button {
     width: 300px;
 }
 
-
+/* Dark Mode */
 .dark-mode {
     background: #222;
     color: white;

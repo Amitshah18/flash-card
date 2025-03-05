@@ -10,9 +10,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let flashcards = JSON.parse(localStorage.getItem("flashcards")) || [];
 
-    // Load Dark Mode State
-    if (localStorage.getItem("darkMode") === "enabled") {
-        enableDarkMode();
+    // 🔹 Load Dark Mode State from Local Storage
+    function loadDarkMode() {
+        if (localStorage.getItem("darkMode") === "enabled") {
+            enableDarkMode();
+        } else {
+            disableDarkMode();
+        }
     }
 
     toggleDarkModeBtn.addEventListener("click", () => {
@@ -34,6 +38,9 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem("darkMode", "disabled");
         toggleDarkModeBtn.innerText = "🌙 Dark Mode";
     }
+
+    // 🔹 Load Dark Mode on Page Load
+    loadDarkMode();
 
     function renderFlashcards() {
         flashcardsContainer.innerHTML = "";
