@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcard App</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="text-center">📚 Flashcard App</h1>
+
+        <div class="d-flex justify-content-between mb-3">
+            <button id="toggle-dark-mode" class="btn btn-secondary">🌙 Dark Mode</button>
+            <button id="add-flashcard" class="btn btn-primary">➕ Add Flashcard</button>
+        </div>
+
+        <div class="board-container">
+            <div class="board p-3" id="flashcards" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+    </div>
+
+    <!-- Popup for Adding/Editing Flashcards -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <h2 id="popup-title">Create Flashcard</h2>
+            <input type="text" id="question" class="form-control mb-2" placeholder="Enter question">
+            <input type="text" id="answer" class="form-control mb-2" placeholder="Enter answer">
+            <button id="save-flashcard" class="btn btn-success">Save</button>
+            <button id="close-popup" class="btn btn-danger">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
